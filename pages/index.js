@@ -51,7 +51,7 @@ export default function Home({ data }) {
           />
         </div>
       </main>
-      <div className="py-8">
+      <div className="py-8 tracking-widest">
         {isLoading ? (
           <button
             type="button"
