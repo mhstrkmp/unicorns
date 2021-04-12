@@ -39,7 +39,7 @@ export default function Home({ data }) {
           🦄 Leoniecorns 🦄
         </h1>
       </header>
-      <main className="p-4 flex-grow">
+      <main className="p-4 flex flex-grow justify-center items-center">
         <div className="z-10">
           <img
             className="objectj-cover max-h-60 md:max-h-full"
