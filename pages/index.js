@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Head from "next/head";
+import Link from "next/link";
 
 const defaultEndpoint = `https://pixabay.com/api/?key=${process.env.PIXABAY_API_KEY}&q=unicorn&image_type=illustration&safesearch=true&per_page=200`;
 
@@ -30,12 +31,12 @@ export default function Home({ data }) {
   return (
     <div className="w-full h-full min-h-screen flex flex-col items-center bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 font-sans">
       <Head>
-        <title>UNICORNS</title>
+        <title>Leoniecorns</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
-        <h1 className="p-8 text-center text-xl font-semibold">
-          🦄 UNICORNS 🦄
+        <h1 className="p-8 text-center text-2xl font-semibold">
+          🦄 Leoniecorns 🦄
         </h1>
       </header>
       <main className="p-4 flex-grow">
@@ -44,15 +45,13 @@ export default function Home({ data }) {
             className=""
             src={image}
             alt=""
-            width={300}
-            height={300}
             onLoad={() => {
               setIsLoading(!isLoading);
             }}
           />
         </div>
       </main>
-      <footer className="py-8">
+      <div className="py-8">
         {isLoading ? (
           <button
             type="button"
@@ -89,6 +88,15 @@ export default function Home({ data }) {
             Nächstes Einhorn
           </button>
         )}
+      </div>
+      <footer className="container mx-auto text-center text-sm space-y-2 mb-2">
+        <p>Mit ❤️ gebastelt von Matthias</p>
+        <p className="text-gray-500 text-xs">
+          Bilder von{" "}
+          <Link href="https://pixabay.com/">
+            <a>Pixabay</a>
+          </Link>
+        </p>
       </footer>
     </div>
   );
