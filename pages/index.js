@@ -35,7 +35,7 @@ export default function Home({ data }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
-        <h1 className="p-8 text-center text-2xl font-semibold">
+        <h1 className="p-8 text-center text-3xl font-semibold">
           🦄 Leoniecorns 🦄
         </h1>
       </header>
