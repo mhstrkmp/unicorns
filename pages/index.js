@@ -42,7 +42,7 @@ export default function Home({ data }) {
       <main className="p-4 flex-grow">
         <div className="z-10">
           <img
-            className=""
+            className="objectj-cover max-h-60 md:max-h-full"
             src={image}
             alt=""
             onLoad={() => {
