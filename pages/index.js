@@ -29,7 +29,7 @@ export default function Home({ data }) {
   };
 
   return (
-    <div className="w-full h-full min-h-screen flex flex-col items-center bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 font-sans">
+    <div className="w-full h-full min-h-screen flex flex-col items-center bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 font-body tracking-wide">
       <Head>
         <title>Leoniecorns</title>
         <link rel="icon" href="/favicon.ico" />
