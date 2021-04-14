@@ -15,9 +15,8 @@ export async function getServerSideProps() {
 }
 
 export default function Home({ data }) {
-  const defaultImage =
-    "https://pixabay.com/get/g70ca273bbad689ba8a4c6afc71b964928b0532d00e8f57c32a67e64ae97fdebff9ede7f290c363b797aa96b64e9ec1da99bdf6921c74c2cf5f5a84d0d24dccd4_640.png";
   const { hits = [] } = data;
+  const defaultImage = hits[0].webformatURL;
   const [image, setImage] = useState(defaultImage);
   const [isLoading, setIsLoading] = useState(false);
   const getNewImage = () => {
