@@ -20,7 +20,7 @@ export default function Home({ data }) {
   const [image, setImage] = useState(defaultImage);
   const [isLoading, setIsLoading] = useState(false);
   const getNewImage = () => {
-    setIsLoading(!isLoading);
+    setIsLoading(true);
     setImage(hits[Math.floor(Math.random() * hits.length)].webformatURL);
   };
   const handleOnClick = async () => {
@@ -45,7 +45,7 @@ export default function Home({ data }) {
             src={image}
             alt=""
             onLoad={() => {
-              setIsLoading(!isLoading);
+              setIsLoading(false);
             }}
           />
         </div>
